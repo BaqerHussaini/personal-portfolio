@@ -241,6 +241,7 @@ body {
 
     .main-footer-info {
         display: flex;
+        font-size: 0.70rem;
         flex-direction: row;
         text-align: center;
         justify-content: space-between; 
