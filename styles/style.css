@@ -240,13 +240,15 @@ body {
     }
 
     .main-footer-info {
-        flex-direction: column;
-        gap: 8px;
+        display: flex;
+        flex-direction: row;
         text-align: center;
+        justify-content: space-between; 
+        width: 100%;
     }
 
     .reach-out, .foright-spacer {
-        width: auto;
+        display: block;
     }
 }
 
