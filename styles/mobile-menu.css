@@ -1,0 +1,146 @@
+/* ================= MOBILE TOP BAR + HAMBURGER MENU =================
+   Hidden by default (desktop). Activated at the same breakpoint the
+   site already uses for stacking (720px). Loaded after style.css and
+   home-menu.css so these rules win the cascade at equal specificity. */
+
+.mobile-topbar,
+.menu-toggle,
+.sidebar-close,
+.sidebar-overlay {
+    display: none;
+}
+
+.sidebar-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a1a1a;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.sidebar-close:hover {
+    background-color: #cacac754;
+}
+
+@media (max-width: 675px) {
+
+    /* ---- Top bar shown in place of the full sidebar ---- */
+    .mobile-topbar {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+        background-color: #f2f2f7;
+        box-shadow: 0px 3px 10px #5e5e6c54;
+        position: fixed;
+        top: 0;
+        z-index: 900;
+    }
+
+    .mobile-topbar-profile {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        padding-left: 8px;
+    }
+
+    .avatar-sm {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mobile-topbar .profile-text h2 {
+        font-size: 0.95rem;
+        line-height: 1.2rem;
+    }
+
+    .mobile-topbar .profile-text p {
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+        margin-top: 2px;
+        color: #6b6b70;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #1a1a1a;
+        padding: 8px;
+        border-radius: 6px;
+    }
+
+    .menu-toggle:hover {
+        background-color: #cacac754;
+    }
+
+    /* ---- Sidebar becomes an off-canvas drawer ---- */
+    .sidebar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        height: 100vh !important;
+        width: 82% !important;
+        max-width: 255px;
+        background-color: #efeff4 !important;
+        transform: translateX(-100%);
+        transition: transform 0.28s ease;
+        z-index: 1000;
+        box-shadow: 2px 0 24px rgba(0, 0, 0, 0.233);
+        padding-top: 56px;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-close {
+        display: inline-flex;
+    }
+
+    /* Hide the sidebar's own profile block since the top bar shows it,
+       unless the drawer is open, where it re-appears for a clean header */
+    .sidebar .profile {
+        margin-top: 0;
+    }
+
+    /* ---- Dimmed backdrop behind the open drawer ---- */
+    .sidebar-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.45);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+        z-index: 999;
+    }
+
+    .sidebar-overlay.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Prevent background scroll while the drawer is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* ---- Icons next to nav items and social links (all breakpoints) ---- */
+.nav-icon {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.social-link .nav-icon {
+    margin-right: 10px;
+}
