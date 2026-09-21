@@ -220,6 +220,25 @@ body {
     }
 }
 
+@media (max-width: 675px) {
+    .main-content {
+        margin: 48px 24px;
+    }
+
+    .main-footer-info {
+        display: flex;
+        font-size: 0.70rem;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-between; 
+        width: 100%;
+    }
+
+    .reach-out, .foright-spacer {
+        display: block;
+    }
+}
+
 @media (max-width: 420px) {
     .main-content {
         margin: 32px 16px;
