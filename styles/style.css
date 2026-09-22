@@ -235,7 +235,7 @@ body {
     }
 
     .reach-out, .foright-spacer {
-        display: block;
+        display: inline-flex;
     }
 }
 
