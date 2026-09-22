@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home-menu.css">
     <link rel="stylesheet" href="styles/mobile-menu.css">
+    <link rel="stylesheet" href="styles/typewriter.css">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 <body>
@@ -22,7 +23,10 @@
                 <img src="assets/images/profile.jpg" alt="Profile Picture" class="avatar avatar-sm">
                 <div class="profile-text">
                     <h2>Baqer Hussaini</h2>
-                    <p>AI Engineer</p>
+                    <p class="role-typewriter">
+                        <span class="sr-only">AI Engineer</span>
+                        <span class="role-typewriter-text" aria-hidden="true"></span><span class="role-typewriter-cursor" aria-hidden="true"></span>
+                    </p>
                 </div>
             </div>
 
@@ -53,7 +57,10 @@
                 <img src="assets/images/profile.jpg" alt="Profile Picture" class="avatar">
                 <div class="profile-text">
                     <h2>Baqer Hussaini</h2>
-                    <p>AI Engineer</p>
+                    <p class="role-typewriter">
+                        <span class="sr-only">AI Engineer</span>
+                        <span class="role-typewriter-text" aria-hidden="true"></span><span class="role-typewriter-cursor" aria-hidden="true"></span>
+                    </p>
                 </div>
             </div>
 
@@ -151,5 +158,6 @@
     </div>
 
     <script src="scripts/mobile-menu.js" defer></script>
+    <script src="scripts/typewriter.js" defer></script>
 </body>
 </html>
