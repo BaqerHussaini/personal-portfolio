@@ -1,6 +1,7 @@
 /* ================= TOOLS PAGE ("Shovels") ================= */
 .tools-page-header {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 .tools-page-subtitle {
