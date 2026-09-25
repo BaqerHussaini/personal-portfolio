@@ -10,22 +10,21 @@
 .app-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 30px;
     margin-top: 40px;
     
 }
 
 .app-card {
     display: flex;
-    flex-direction: row;
-    gap: 8px;
-    padding: 14px 10px;
+    gap: 10px;
+    padding: 12px 12px;
     border: 1px solid #b0b0a88f;
     border-radius: 8px;
     text-decoration: none;
-    color: inherit;
-    background-color: #efeff4;
-    box-shadow: 2px 5px 5px 0px #a5a5ab5e;
+    color: #1a1a1a;
+    background: linear-gradient(90deg, #a5a5ab44, #efeff471, #a5a5ab44);
+    box-shadow: 0px 20px 30px 3px #a5a5ab44;
 }
 
 .app-card:hover {
@@ -34,14 +33,16 @@
     box-shadow: 0px 2px 20px 0px #4a4aa444;
 }
 
-.app-icon {
-    display: flex;
-    font-size: 2.5rem;
-    margin-top: auto;
+.app-card img {
+    border-radius: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 5px;
+    background-color: white;
 }
 
 .app-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: normal;
     margin: auto 0px;
 }
@@ -62,11 +63,12 @@
     }
 
     .app-card {
-        padding: 10px 8px;
+        padding: 8px 8px 12px;
     }
 
-    .app-icon {
-        font-size: 2rem;
+    .app-card img {
+        width: 35px;
+        height: 35px;
     }
 
     .app-card h3 {
