@@ -17,14 +17,10 @@
 
 
 /* RESPONSIVE BREAKPOINTS */
-@media (max-width: 900px) {
-}
-
-@media (max-width: 720px) {
-}
-
-@media (max-width: 420px) {
+@media (max-width: 675px) {
     .main-content h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        line-height: 1.25;
+        font-weight: 600;
     }
 }
