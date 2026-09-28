@@ -1,0 +1,92 @@
+.title h1 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.content h2 {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    font-weight: 500;
+}
+
+.content h3 {
+    color: rgba(0, 0, 0, 0.511);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.content p {
+    color: rgba(0, 0, 0, 0.628);
+    margin-bottom: 15px;
+}
+
+.tools p {
+    display: inline-block;
+    font-size: 0.95rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.266);
+    border-radius: 6px;
+    background-color: white;
+    padding: 4px 8px;
+    margin-bottom: 5px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.exp-1, .exp-2, .exp-3,
+.exp-4, .exp-5, .education {
+    padding-top: 35px;
+}
+
+.education h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 30px 0px 8px 0px;
+}
+
+.education p {
+    color: rgba(0, 0, 0, 0.628);
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 675px) {
+    .title h1 {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    .content h2 {
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    .content h3 {
+        font-size: 0.95rem;
+    }
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    .tools {
+        display: block;
+        gap: 20px;
+    }
+
+    .tools p {
+        font-size: 0.8rem;
+    }
+
+    .exp-1, .exp-2, .exp-3,
+    .exp-4, .exp-5, .education {
+        padding-top: 20px;
+    }
+
+    .education h1 {
+        font-size: 1.2rem;
+    }
+}
