@@ -24,10 +24,11 @@
 .end-sentence, .end-sentence a {
     font-size: 1.08rem;
     font-style: italic;
+    font-weight: 500;
     color: inherit;
 }
 
-.now, .next {
+.now, .next, .end {
     margin-top: 35px;
 }
 
