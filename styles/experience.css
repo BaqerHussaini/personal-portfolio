@@ -29,17 +29,17 @@
     border-color: rgba(0, 0, 0, 0.266);
     border-radius: 6px;
     background-color: white;
-    padding: 4px 8px;
+    padding: 0px 5px;
     margin-bottom: 5px;
 }
 
 .title {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .exp-1, .exp-2, .exp-3,
-.exp-4, .exp-5, .education {
-    padding-top: 35px;
+.exp-4, .exp-5 {
+    margin-top: 35px;
 }
 
 .education h1 {
@@ -51,6 +51,11 @@
 .education p {
     color: rgba(0, 0, 0, 0.628);
 }
+
+.education {
+    margin: 50px 0px 20px 0px;
+}
+
 
 /* RESPONSIVE BREAKPOINTS */
 @media (max-width: 675px) {
@@ -69,7 +74,7 @@
     }
 
     .title {
-        margin-bottom: 15px;
+        margin-bottom: 35px;
     }
 
     .tools {
@@ -78,15 +83,20 @@
     }
 
     .tools p {
-        font-size: 0.8rem;
+        font-size: 0.875rem;
+        padding: 0px 3px;
     }
 
     .exp-1, .exp-2, .exp-3,
     .exp-4, .exp-5, .education {
-        padding-top: 20px;
+        margin-top: 20px;
     }
 
     .education h1 {
         font-size: 1.2rem;
+    }
+
+    .education {
+        margin-bottom: 30px;
     }
 }
