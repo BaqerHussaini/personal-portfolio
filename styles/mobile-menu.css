@@ -43,7 +43,7 @@
         justify-content: space-between;
         padding: 12px 16px;
         background-color: #f2f2f7;
-        box-shadow: 0px 3px 10px #5e5e6c54;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.157);
         position: sticky;
         top: 0;
         z-index: 900;

@@ -63,4 +63,8 @@
     .now, .next {
         margin-top: 25px;
     }
+
+    .end {
+        margin-bottom: 40px;
+    }
 }

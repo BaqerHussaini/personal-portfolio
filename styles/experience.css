@@ -73,6 +73,10 @@
         font-size: 0.95rem;
     }
 
+    .content p {
+        margin-bottom: 6px;
+    }
+
     .title {
         margin-bottom: 35px;
     }
