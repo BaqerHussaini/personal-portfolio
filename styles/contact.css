@@ -26,6 +26,7 @@
     color: #1a1a1a;
     background: linear-gradient(90deg, #a5a5ab44, #efeff471, #a5a5ab44);
     box-shadow: 0px 20px 30px 3px #a5a5ab44;
+    transition: transform 0.2s ease-in-out; 
 }
 
 .app-card:hover {
@@ -50,7 +51,7 @@
 
 
 /* RESPONSIVE BREAKPOINTS */
-@media (max-width: 675px) {
+@media (max-width: 679px) {
     .contact-page-header {
         font-size: 1.6rem;
     }

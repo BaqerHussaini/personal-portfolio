@@ -58,7 +58,7 @@
 
 
 /* RESPONSIVE BREAKPOINTS */
-@media (max-width: 675px) {
+@media (max-width: 679px) {
     .title h1 {
         font-size: 1.3rem;
         margin-bottom: 5px;

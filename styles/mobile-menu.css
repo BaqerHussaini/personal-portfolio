@@ -26,7 +26,7 @@
     background-color: #cacac754;
 }
 
-@media (max-width: 675px) {
+@media (max-width: 679px) {
 
     /* The topbar and overlay are now inside .container (display:flex, row).
        Since the sidebar is position:fixed here and drops out of flow, without
