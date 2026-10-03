@@ -1,0 +1,166 @@
+.main-content {
+    padding: 35px 80px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.content h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+
+.content h2, .content h3{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: normal;
+    margin-top: 12px;
+}
+
+.content h3 {
+    color: #1a1a1a9b;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.50rem;
+    font-weight: normal;
+    color: #1a1a1a6a;
+    margin-top: 12px;
+}
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 12px;
+}
+
+.tools p {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: inherit;
+    margin: 0;
+    padding: 0.125rem 0.625rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #1a1a1a2d;
+    border-radius: 6px;
+}
+
+.content img {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.description {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.description h2 {
+    margin: 16px 0 8px 0;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    font-weight: 700;
+}
+
+.description p {
+    margin: 8px 0 16px 0;
+    font-size: 1rem;
+    line-height: 1.625;
+    color: inherit;
+}
+
+.description ul, .description ol {
+    margin: 0 0 24px 24px;
+}
+
+.description il {
+    margin-bottom: 8px;
+    padding-left: 4px;
+    font-size: 1rem;
+    line-height: 1.625;
+    color: inherit;
+}
+
+.description strong {
+    font-weight: 600;
+}
+
+.description code {
+    padding: 0 4px;
+    color: #db2777;
+    background-color: #c0b6b645;
+    border-radius: 4px;
+}
+
+.skills {
+    margin-top: 12px;
+    gap: 0.25rem;
+}
+
+.skills p {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: white;
+    background-color: #1a1a1a;
+    border-radius: 16px;
+}
+
+.links {
+    display: flex;
+    margin-top: 12px;
+    gap: 16px;
+}
+.links a {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    color: inherit;
+    text-decoration: none;
+    background-color: white;
+    border-style: solid;
+    border-color: #1a1a1a68;
+    border-width: 1px;
+    border-radius: 6px;
+}
+
+.links a.active {
+    color: white;
+    background-color: black;
+}
+
+.links a:hover {
+    background-color: #cacac754;
+    color: #1a1a1a;
+}
+
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1180px){
+    .main-content {
+        padding: 0;
+    }
+}
+
+@media (max-width: 767px){
+    .description h2 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}

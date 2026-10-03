@@ -218,7 +218,7 @@ body {
 
 
 /* RESPONSIVE BREAKPOINTS */
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .main-content {
         margin: 80px 60px;
     }
@@ -249,7 +249,7 @@ body {
 
 @media (max-width: 420px) {
     .main-content {
-        margin: 32px 16px;
+        margin: 24px 16px;
     }
 }
 

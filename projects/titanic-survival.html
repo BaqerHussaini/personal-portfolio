@@ -126,6 +126,70 @@
         <main class="main-menu">
             <!-- Content-->
             <div class="main-content">
+                <a href="../projects.html" class="back">← Back</a>
+
+                <div class="content">
+                    <h1>Titanic Survival Prediction</h1>
+                    <h2>Simple ML baseline | Jupyter notebooks</h2>
+                    <h3>Clean Python notebooks predicting passenger survival using basic demographic data and classic scikit-learn models.</h3>
+                    <p>By Baqer Hussaini • In Progress</p>
+                    <div class="tools">
+                        <p>Numpy</p>
+                        <p>Pandas</p>
+                        <p>Matplotlib</p>
+                        <p>Seaborn</p>
+                        <p>Scikit-Learn</p>
+                    </div>
+                    <img src="../assets/images/titanic-survival.jpg" alt="Titanic">
+
+                    <div class="description">
+                        <h2>Overview</h2>
+                        <p>This project uses the Kaggle Titanic dataset to predict passenger survival. Before building any model, I wanted to learn how to prepare data the right way, so I split the cleaning work into a step-by-step pipeline of separate notebooks instead of one long, messy file.</p>
+                        
+                        <h2>Tools</h2>
+                        <p>Python · pandas · NumPy · scikit-learn · matplotlib · seaborn · Jupyter · Parquet</p>
+
+                        <h2>Process</h2>
+                        <p>I split the data preparation into eight notebooks, one per stage:</p>
+                        <ul>
+                            <li><strong>Structural checks:</strong> inspected the data and renamed columns to clear names</li>
+                            <li><strong>Deduplication:</strong> removed duplicate records</li>
+                            <li><strong>Outlier detection:</strong> audited odd values, including ticket formats with regex</li>
+                            <li><strong>Missing data:</strong> kept <code>cabin</code> as "Unknown" (77% missing), filled <code>boarding_port</code> with the most common port for 1st class, and imputed <code>age</code> with MICE</li>
+                            <li><strong>Encoding:</strong> binary mapping for <code>sex</code>, one-hot encoding for <code>boarding_port</code></li>
+                            <li><strong>Feature engineering:</strong> extracted passenger <code>title</code> from names</li>
+                            <li><strong>Type enforcement:</strong> downcast data types to save memory</li>
+                            <li><strong>EDA:</strong> started exploring survival patterns</li>
+                        </ul>
+
+                        <h2>What I Learned</h2>
+                        <p>This project took me into topics I had never touched before:</p>
+                        <ul>
+                            <li>How to decide what to do with missing data, instead of just dropping or filling it blindly</li>
+                            <li>How MICE imputation works and how to measure whether it guessed well</li>
+                            <li>Why one-hot encoding is better than numbering categories</li>
+                            <li>Using regular expressions to validate messy text fields</li>
+                            <li>Organizing data into stages (raw, under-process, processed) and why Parquet beats CSV for processed data</p></li>
+                        </ul>
+
+                        <h2>What's Next</h2>
+                        <ul>
+                            <li>Finish the exploratory analysis and visualizations</li>
+                            <li>Build baseline models (logistic regression, random forest)</li>
+                            <li>Cross-validate and compare results</li>
+                            <li>Submit predictions to Kaggle</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills">
+                        <p>Data Analysis</p>
+                        <p>Data Science</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://github.com/BaqerHussaini/titanic-survival-prediction" target="_blank" rel="noopener noreferrer" class="active">GitHub</a>
+                    </div>
+                </div>
             </div>
 
             <!-- Footer-->
