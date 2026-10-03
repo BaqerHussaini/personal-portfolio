@@ -61,7 +61,6 @@
 .detail {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .detail img {
@@ -96,20 +95,6 @@
     font-size: 0.75rem;
     font-weight: normal;
     line-height: 1rem;
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex-shrink: 0; 
-}
-    
-.detail p {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    overflow: hidden;
-    line-height: 1.25;
-    flex-shrink: 0; 
 }
 
 .visit-tools {
@@ -161,19 +146,15 @@
 }
 
 .skills {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     margin-top: 6px;
-    gap: 0.25rem;
 }
 
 .skills p {
+    display: inline-flex;
     padding: 0.125rem 0.5rem;
     border-radius: 9999px;
     background-color: #fdfbfb;
-    white-space: nowrap; 
-    overflow: hidden;
+    gap: 0.25rem;
 }
 
 
