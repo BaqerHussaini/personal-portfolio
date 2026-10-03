@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/mobile-menu.css">
-    <link rel="stylesheet" href="styles/house-price.css">
+    <link rel="stylesheet" href="styles/projects-style.css">
     <link rel="stylesheet" href="../styles/typewriter.css">
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
 </head>
@@ -126,6 +126,91 @@
         <main class="main-menu">
             <!-- Content-->
             <div class="main-content">
+                <a href="../projects.html" class="back">← Back</a>
+
+                <div class="content">
+                    <h1>House Price Prediction</h1>
+                    <h2>An interactive data exploration of housing market trends</h2>
+                    <h3>I apply regression techniques to estimate property values by evaluating structural and regional variables like square footage, location, and overall condition.</h3>
+                    <p>By Baqer Hussaini • 2026-08-22</p>
+                    <div class="tools">
+                        <p>Python</p>
+                        <p>Pandas</p>
+                        <p>Matplotlib</p>
+                        <p>Seaborn</p>
+                        <p>Scikit-Learn</p>
+                    </div>
+                    <img src="../assets/images/house-price.jpg" alt="Titanic">
+
+                    <div class="description">
+                        <h2>Overview</h2>
+                        <p>This was my first machine learning project. I built an end-to-end workflow that takes a small housing dataset (47 houses), trains a Multiple Linear Regression model, evaluates it, and saves it so it can be reused without retraining. The goal was to learn the full cycle of a data science project, from raw CSV to a saved model.</p>
+                        
+                        <h2>Tools</h2>
+                        <p>Python · pandas · matplotlib · seaborn · scikit-learn · Jupyter · Joblib</p>
+
+                        <h2>Process</h2>
+                        <p>I split the data preparation into eight notebooks, one per stage:</p>
+                        <ul>
+                            <li><strong>Data loading:</strong> loaded the CSV with <code>area</code>, <code>rooms</code>, and <code>price</code></li>
+                            <li><strong>Exploratory analysis:</strong> checked distributions, data quality, and duplicates</li>
+                            <li><strong>Train/test split:</strong> 80% for training, 20% held back to prevent data leakage</li>
+                            <li><strong>Model training:</strong> fitted a Multiple Linear Regression model</li>
+                            <li><strong>Evaluation:</strong> graded the model using MAE, RMSE, and R²</li>
+                            <li><strong>Saving the model:</strong> exported it as a <code>.joblib</code> file for reuse</li>
+                        </ul>
+
+                        <h2>Results</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>What it means</th>
+                                    <th>Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>R²</td>
+                                    <td>Share of price variation the model explains</td>
+                                    <td>51.49%</th>
+                                </tr>
+                                <tr>
+                                    <td>MAE</td>
+                                    <td>Average prediction miss</td>
+                                    <td>$72,334.75</td>
+                                </tr>
+                                <tr>
+                                    <td>RMSE</td>
+                                    <td>Error that penalizes big misses more</td>
+                                    <td>$92,792.37</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Key findings:</p>
+                        <ul>
+                            <li>Living area is the strongest driver of price.</li>
+                            <li>Adding rooms without adding space is associated with a lower price (about $13,500 less per extra room), which suggests buyers prefer spacious layouts over heavily partitioned ones.</li>
+                        </ul>
+
+                        <h2>What I Learned</h2>
+                        <ul>
+                            <li>How a full machine learning project flows from data to a saved model</li>
+                            <li>Why splitting data into train and test sets matters</li>
+                            <li>How to read and compare MAE, RMSE, and R²</li>
+                            <li>How to save a trained model with joblib so it can be loaded later</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills">
+                        <p>Data Analysis</p>
+                        <p>Data Science</p>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://github.com/BaqerHussaini/simple-house-price-prediction" target="_blank" rel="noopener noreferrer" class="active">GitHub</a>
+                    </div>
+                </div>
             </div>
 
             <!-- Footer-->
