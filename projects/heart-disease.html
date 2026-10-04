@@ -134,50 +134,68 @@
                     <h3>This project analyzes clinical metrics to classify heart disease presence using clean data preprocessing and simple machine learning models.</h3>
                     <p>By Baqer Hussaini • 2026-09-12</p>
                     <div class="tools">
+                        <p>Python</p>
                         <p>Numpy</p>
                         <p>Pandas</p>
                         <p>Matplotlib</p>
                         <p>Seaborn</p>
                         <p>Scikit-Learn</p>
+                        <p>Git/GitHub</p>
+                        <p>Jupyter</p>
                     </div>
                     <img src="../assets/images/heart-disease.png" alt="House">
 
                     <div class="description">
                         <h2>Overview</h2>
-                        <p>This project uses the Kaggle Titanic dataset to predict passenger survival. Before building any model, I wanted to learn how to prepare data the right way, so I split the cleaning work into a step-by-step pipeline of separate notebooks instead of one long, messy file.</p>
+                        <p>This project uses the Cleveland UCI Heart Disease dataset (303 patients, 13 features) to predict whether a patient has heart disease. based on clinical metrics such as age, blood pressure, cholesterol, and heart rate. It went deeper than my earlier projects, with a stronger focus on feature engineering and on evaluating models properly instead of relying on a single accuracy number.</p>
                         
                         <h2>Tools</h2>
-                        <p>Python · pandas · NumPy · scikit-learn · matplotlib · seaborn · Jupyter · Parquet</p>
+                        <p>Python · NumPy · pandas · matplotlib · seaborn · scikit-learn · Jupyter · Git/GitHub</p>
 
                         <h2>Process</h2>
-                        <p>I split the data preparation into eight notebooks, one per stage:</p>
+                        <p>I split the work into notebooks, one per stage:</p>
                         <ul>
-                            <li><strong>Structural checks:</strong> inspected the data and renamed columns to clear names</li>
-                            <li><strong>Deduplication:</strong> removed duplicate records</li>
-                            <li><strong>Outlier detection:</strong> audited odd values, including ticket formats with regex</li>
-                            <li><strong>Missing data:</strong> kept <code>cabin</code> as "Unknown" (77% missing), filled <code>boarding_port</code> with the most common port for 1st class, and imputed <code>age</code> with MICE</li>
-                            <li><strong>Encoding:</strong> binary mapping for <code>sex</code>, one-hot encoding for <code>boarding_port</code></li>
-                            <li><strong>Feature engineering:</strong> extracted passenger <code>title</code> from names</li>
-                            <li><strong>Type enforcement:</strong> downcast data types to save memory</li>
-                            <li><strong>EDA:</strong> started exploring survival patterns</li>
+                            <li><strong>Data exploration:</strong> checked class balance, compared features such as sex, chest pain type, and max heart rate against the target, and plotted a correlation heatmap</li>
+                            <li><strong>Train/test split</strong> 80% training (242 samples), 20% testing (61 samples)</li>
+                            <li><strong>Model comparison:</strong> trained KNN, Logistic Regression, and Random Forest</li>
+                            <li><strong>Hyperparameter tuning:</strong> trained simple classification models, such as [your models, e.g. logistic regression, random forest]</li>
+                            <li><strong>Evaluation:</strong> ROC curve and AUC, confusion matrix, classification report, and 5-fold cross-validation</li>
+                            <li><strong>Feature importance:</strong> read the Logistic Regression coefficients to see which features drive predictions</li>
                         </ul>
+
+                        <h2>Results</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Test accuracy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>KNN (tuned)</td>
+                                    <td>75.4%</td>
+                                </tr>
+                                <tr>
+                                    <td>Random Forest (tuned)</td>
+                                    <td>86.9%</td>
+                                </tr>
+                                <tr>
+                                    <td>Logistic Regression (tuned)</td>
+                                    <td>88.5%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Logistic Regression was the best model. Under 5-fold cross-validation it averaged 84.8% accuracy, 82.2% precision, 92.7% recall, and 87.1% F1. On the test set it made 7 mistakes out of 61 patients (4 false negatives and 3 false positives). The course's 95% accuracy target was not reached.</p>
+                        <p>Chest pain type and the exercise ST-segment slope pushed predictions toward heart disease, while sex pushed away from it. That matches the data, where women in this dataset were far more likely to be positive than men.</p>
 
                         <h2>What I Learned</h2>
-                        <p>This project took me into topics I had never touched before:</p>
                         <ul>
-                            <li>How to decide what to do with missing data, instead of just dropping or filling it blindly</li>
-                            <li>How MICE imputation works and how to measure whether it guessed well</li>
-                            <li>Why one-hot encoding is better than numbering categories</li>
-                            <li>Using regular expressions to validate messy text fields</li>
-                            <li>Organizing data into stages (raw, under-process, processed) and why Parquet beats CSV for processed data</p></li>
-                        </ul>
-
-                        <h2>What's Next</h2>
-                        <ul>
-                            <li>Finish the exploratory analysis and visualizations</li>
-                            <li>Build baseline models (logistic regression, random forest)</li>
-                            <li>Cross-validate and compare results</li>
-                            <li>Submit predictions to Kaggle</li>
+                            <li>Why a train/test split matters, and how cross-validation gives a more honest score than a single split</li>
+                            <li>How to tune hyperparameters with RandomizedSearchCV and GridSearchCV</li>
+                            <li>How to evaluate beyond accuracy, using precision, recall, F1, ROC/AUC, and a confusion matrix</li>
+                            <li>Why recall matters in a medical problem, where missing a sick patient is worse than a false alarm</li>
+                            <li>How to read model coefficients to see what a model learned</li>
                         </ul>
                     </div>
 
