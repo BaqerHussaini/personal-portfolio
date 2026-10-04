@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    max-height: 380px;
+    max-height: 330px;
     gap: 0.25rem;
     justify-content: space-between;
     background-color: #b8b8bc38;
@@ -61,100 +61,59 @@
 .detail {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .detail img {
     max-width: 100%;
-    max-height: 195px;
+    max-height: 210px;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
 
 .detail h2 {
+    margin-top: 6px;
     font-size: inherit;
-    line-height: 1;
     font-weight: 600;
-    margin-top: 6px;
-    display: flex;
-    flex-direction: row;
+    line-height: 1.25;
     justify-content: space-between;
-}
-
-.detail h2 span {
-    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
     overflow: hidden;
-    text-overflow: ellipsis;
+    flex-shrink: 0;
+
 }
 
-.detail h3, .detail p {
+.detail p {
     margin-top: 6px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    line-height: 1.25;
+    flex-shrink: 0; 
 }
 
-.detail h3 {
-    font-size: 0.75rem;
-    font-weight: normal;
-    line-height: 1rem;
-}
-
-.visit-tools {
-    display: flex;
-    flex-direction: column;
-    margin-top: 12px;
-}
-
-.visit {
+.type-date {
     display: flex;
     flex-direction: row;
+    margin: 8px 0 6px 0;
     justify-content: space-between;
 }
 
-.sources {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-}
-
-.source {
+.type {
+    padding: 4px 8px;
+    color: #ffffff;
+    background-color: #1a1a1a;
     font-size: 0.75rem;
     line-height: 1rem;
-    display: flex;
-    padding: 0px 12px;
     font-weight: 500;
     text-decoration: none;
-    height: 1.5rem;
-    align-items: center;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    border-style: solid;
-    border-width: 1px;
     border-radius: 6px;
-    border-color: #1a1a1a;
-}
-
-.source:hover {
-    background-color: #cacac754;
-    color: #1a1a1a;
-}
-
-.state {
-    display: flex;
-    padding: 2px 8px;
-    border-radius: 9999px;
-    align-items: center;
-    background-color: rgba(92, 235, 168, 0.463);
-}
-
-.skills {
-    margin-top: 6px;
-}
-
-.skills p {
-    display: inline-flex;
-    padding: 0.125rem 0.5rem;
-    border-radius: 9999px;
-    background-color: #fdfbfb;
-    gap: 0.25rem;
 }
 
 
@@ -188,8 +147,6 @@
         margin: 24px 16px;
     }
 }
-
-
 
 @media (max-width: 639px) {
     .projects {

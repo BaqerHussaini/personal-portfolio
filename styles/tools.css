@@ -57,6 +57,12 @@
 
 
 /* RESPONSIVE BREAKPOINTS */
+@media (max-width: 767px){
+    .main-content {
+        margin: 48px 24px;
+    }
+}
+
 @media (max-width: 679px) {
     .tools-page-header {
         font-size: 1.6rem;
