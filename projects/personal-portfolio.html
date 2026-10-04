@@ -137,45 +137,42 @@
                         <p>HTML</p>
                         <p>CSS</p>
                         <p>JavaScript</p>
+                        <p>Git/GitHub</p>
                     </div>
                     <img src="../assets/images/personal-portfolio.png" alt="Personal portfolio">
 
                     <div class="description">
                         <h2>Overview</h2>
-                        <p>This project uses the Kaggle Titanic dataset to predict passenger survival. Before building any model, I wanted to learn how to prepare data the right way, so I split the cleaning work into a step-by-step pipeline of separate notebooks instead of one long, messy file.</p>
+                        <p>This site is my personal hub for projects, experience, and writing. I built it without frameworks to learn how the web works underneath: layout, responsiveness, navigation, and small interactions. It started as a place to show my data science notebooks, and I enjoyed building it so much that it became a project of its own.</p>
                         
                         <h2>Tools</h2>
-                        <p>Python · pandas · NumPy · scikit-learn · matplotlib · seaborn · Jupyter · Parquet</p>
+                        <p>HTML · CSS · JavaScript · Git/GitHub</p>
 
                         <h2>Process</h2>
-                        <p>I split the data preparation into eight notebooks, one per stage:</p>
+                        <p>I built the site in these stages:</p>
                         <ul>
-                            <li><strong>Structural checks:</strong> inspected the data and renamed columns to clear names</li>
-                            <li><strong>Deduplication:</strong> removed duplicate records</li>
-                            <li><strong>Outlier detection:</strong> audited odd values, including ticket formats with regex</li>
-                            <li><strong>Missing data:</strong> kept <code>cabin</code> as "Unknown" (77% missing), filled <code>boarding_port</code> with the most common port for 1st class, and imputed <code>age</code> with MICE</li>
-                            <li><strong>Encoding:</strong> binary mapping for <code>sex</code>, one-hot encoding for <code>boarding_port</code></li>
-                            <li><strong>Feature engineering:</strong> extracted passenger <code>title</code> from names</li>
-                            <li><strong>Type enforcement:</strong> downcast data types to save memory</li>
-                            <li><strong>EDA:</strong> started exploring survival patterns</li>
+                            <li><strong>Layout:</strong> a fixed sidebar with my profile and navigation, and a main content area shared across every page</li>
+                            <li><strong>Pages:</strong> Home, Projects, Experience, About, Tools, Blogs, and Contact, plus a dedicated case-study page for each project</li>
+                            <li><strong>Responsive design:</strong> on small screens the sidebar becomes a top bar with a slide-out menu and a dimmed overlay</li>
+                            <li><strong>Interactions:</strong> a typewriter effect for my role and the mobile menu toggle, both in vanilla JavaScript</li>
+                            <li><strong>Structure:</strong> a separate stylesheet for each page and reusable project page styles, so the CSS stays organized</li>
                         </ul>
 
                         <h2>What I Learned</h2>
                         <p>This project took me into topics I had never touched before:</p>
                         <ul>
-                            <li>How to decide what to do with missing data, instead of just dropping or filling it blindly</li>
-                            <li>How MICE imputation works and how to measure whether it guessed well</li>
-                            <li>Why one-hot encoding is better than numbering categories</li>
-                            <li>Using regular expressions to validate messy text fields</li>
-                            <li>Organizing data into stages (raw, under-process, processed) and why Parquet beats CSV for processed data</p></li>
+                            <li>How to build a layout that adapts from desktop to mobile with CSS media queries</li>
+                            <li>How to write small JavaScript features (a menu drawer and a typewriter effect) without a library</li>
+                            <li>Basic accessibility habits, like ARIA labels and screen-reader-only text for animated content</li>
+                            <li>How to organize a multi-page site so styles and scripts stay manageable</li>
+                            <li>That I enjoy building the interface as much as the models behind it</li>
                         </ul>
 
                         <h2>What's Next</h2>
                         <ul>
-                            <li>Finish the exploratory analysis and visualizations</li>
-                            <li>Build baseline models (logistic regression, random forest)</li>
-                            <li>Cross-validate and compare results</li>
-                            <li>Submit predictions to Kaggle</li>
+                            <li>Finish the Blogs section and publish my first posts</li>
+                            <li>Replacing the basic tools used for building the site with modern tools</li>
+                            <li>Adding more features</li>
                         </ul>
                     </div>
 
