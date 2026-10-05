@@ -1,3 +1,9 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .main-content p {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -10,41 +16,43 @@
 }
 
 .title p {
-    font-size: 1rem;
-    font-weight: 1.5rem;
     margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
-.category {
+.categories {
+    display: flex;
+    gap: 8px;
+}
+
+.categories button {
+    padding: 8px 12px;
+    color: #ffffff;
+    background-color: #1a1a1a;
     font-size: .75rem;
     line-height: 1rem;
-    padding: 8px 12px;
+    border: 1px solid #1a1a1a;
     border-radius: 9999px;
-    border-width: 1px;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    margin-top: 20px;
 }
 
 .projects {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-top: 20px;
-    gap: 1.5rem;
+    gap: 24px;
 }
 
 .project {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
-    max-height: 330px;
-    gap: 0.25rem;
+    max-height: 340px;
+    height: 100vh;
+    overflow: hidden;
     justify-content: space-between;
     background-color: #b8b8bc38;
     border-radius: 10px;
     text-decoration: none;
     color: inherit;
-    overflow: hidden;
     transition: transform 0.2s ease-in-out; 
     box-shadow:
     0 0px 2px 0 rgba(0, 0, 0, 0),
@@ -58,25 +66,26 @@
     transform: scale(1.055); 
 }
 
-.detail {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.detail img {
+.project img {
     max-width: 100%;
     max-height: 210px;
     height: 100%;
     object-fit: cover;
+    margin: 8px;
     border-radius: 5px;
 }
 
+.detail {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 24px 16px 24px;
+}
+
 .detail h2 {
-    margin-top: 6px;
     font-size: inherit;
-    font-weight: 600;
     line-height: 1.25;
+    font-weight: 600;
     justify-content: space-between;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -109,22 +118,14 @@
     padding: 4px 8px;
     color: #ffffff;
     background-color: #1a1a1a;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    font-weight: 500;
-    text-decoration: none;
     border-radius: 6px;
 }
 
 
 /* RESPONSIVE BREAKPOINTS */
 @media (max-width: 767px){
-    .main-content {
-        margin: 48px 24px;
-    }
-    
     .projects {
-        gap: 0.8rem;;
+        gap: 12px;;
     }
 
     .title h1 {
@@ -133,18 +134,17 @@
     }
 
     .title p {
+        margin-top: 12px;
         font-size: 0.875rem;
         line-height: 1.25rem;
     }
 
+    .projects {
+        gap: 12px;;
+    }
+
     .project:hover {
         transform: scale(1.04); 
-    }
-}
-
-@media (max-width: 679px) {
-    .main-content {
-        margin: 24px 16px;
     }
 }
 

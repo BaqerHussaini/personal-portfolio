@@ -171,7 +171,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-top: 6px;
+    margin-top: 12px;
     gap: 0.25rem;
 }
 
@@ -190,10 +190,6 @@
         gap: 12px;
     }
 
-    .projects {
-        gap: 0.8rem;;
-    }
-
     .title h1 {
         font-size: 1.5rem;
         line-height: 2rem;
@@ -206,7 +202,7 @@
     }
 
     .projects {
-        gap: 12px;
+        gap: 12px;;
     }
 
     .project:hover {
