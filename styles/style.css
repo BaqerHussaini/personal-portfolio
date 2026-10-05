@@ -154,11 +154,13 @@ body {
 
 /* Content */
 .main-content {
-    margin: 127px 155px;
-    max-width: 800px;
+    margin: 0 auto;
+    padding: 128px 48px;
+    max-width: 896px;
+    width: 100%;
 }
 
-.main-content p {
+.content p {
     font-size: 1rem;
     line-height: 1.5rem;
 }
@@ -218,18 +220,24 @@ body {
 
 
 /* RESPONSIVE BREAKPOINTS */
-@media (max-width: 950px) {
+@media (max-width: 1023px){
     .main-content {
-        margin: 80px 60px;
+        padding: 128px 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-content {
+        padding: 24px 24px;
     }
 }
 
 @media (max-width: 679px) {
     .main-content {
-        margin: 48px 24px;
+        padding: 24px 24px;
     }
 
-    .main-content p {
+    .content p {
         font-size: 0.875rem;
     }
 
@@ -247,9 +255,9 @@ body {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 639px) {
     .main-content {
-        margin: 24px 16px;
+        padding: 24px 16px 16px 16px;
     }
 }
 
