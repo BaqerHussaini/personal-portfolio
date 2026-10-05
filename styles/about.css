@@ -52,7 +52,7 @@
 /* RESPONSIVE BREAKPOINTS */
 @media (max-width: 1135px) {
     .content {
-        padding: 0;
+        margin: 0;
     }
 }
 
