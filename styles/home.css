@@ -17,8 +17,13 @@
     color: rgb(75 85 99);
 }
 
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .description p {
-    margin-bottom: 16px;
     color: inherit;
 }
 
@@ -34,8 +39,8 @@
         margin-top: 16px;
     }
 
-    .description p {
-        margin-bottom: 12px;
+    .description {
+        gap: 12px;
     }
 }
 
