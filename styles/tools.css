@@ -1,23 +1,30 @@
 /* ================= TOOLS PAGE ("Shovels") ================= */
-.tools-page-header {
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
     font-size: 3rem;
+    line-height: 1;
     font-weight: 500;
 }
 
-.tools-page-subtitle {
-    margin-top: 10px;
+.subtitle {
+    margin-top: 20px;
 }
 
 .tool-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 40px;
-    
+    margin-top: 20px;
+    padding-top: 24px;
+    gap: 36px;
 }
 
 .tool-card {
     display: flex;
+    width: 100%;
     gap: 10px;
     padding: 12px 12px;
     border: 1px solid #b0b0a88f;
@@ -57,18 +64,26 @@
 
 
 /* RESPONSIVE BREAKPOINTS */
-@media (max-width: 767px){
-    .main-content {
-        margin: 48px 24px;
+@media (max-width: 767px) {
+    .title {
+        font-size: 1.5rem;
+        line-height: 2.1rem;
+    }
+    .subtitle, .tool-grid {
+        margin-top: 16px;
+    }
+
+    .tool-grid {
+        gap: 24px;
     }
 }
 
 @media (max-width: 679px) {
-    .tools-page-header {
+    .title {
         font-size: 1.6rem;
     }
 
-    .tools-page-subtitle {
+    .subtitle {
         font-size: 0.95rem;
     }
 
