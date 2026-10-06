@@ -1,122 +1,220 @@
-.main-content {
-    padding: 40px 40px;
+.content {
+    display: flex;
+    flex-direction: column;
 }
 
-.title h1 {
-    font-size: 1.9rem;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.content h2 {
-    font-size: 1.2rem;
-    line-height: 1.75;
-    font-weight: 500;
+.content h2, .content h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: inherit;
 }
 
 .content h3 {
-    color: rgba(0, 0, 0, 0.511);
-    font-size: 1rem;
-    font-weight: 500;
+    color: #737373;
 }
 
 .content p {
-    color: rgba(0, 0, 0, 0.628);
-    margin-bottom: 15px;
-}
-
-.tools p {
-    display: inline-block;
-    font-size: 0.95rem;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.266);
-    border-radius: 6px;
-    background-color: white;
-    padding: 0px 5px;
-    margin-bottom: 5px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.1px;
 }
 
 .title {
-    margin-bottom: 50px;
+    padding: 48px 40px 0 40px;
 }
 
-.exp-1, .exp-2, .exp-3,
-.exp-4, .exp-5 {
-    margin-top: 35px;
+.title h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: inherit;
+    letter-spacing: -1.2px;
 }
 
-.education h1 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin: 30px 0px 8px 0px;
+.title p {
+    margin-top: 8px;
+    color: #404040;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    padding: 40px 0;
+    gap: 128px;
+}
+
+.exp {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.timeline-dot {
+    display: flex;
+    margin-left: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(150, 140, 140, 0.205);
+    border-radius: 9999px;
+}
+
+.timeline-dot span {
+    padding: 8px;
+    margin: auto;
+    width: 12px;
+    height: 12px;
+    background-color: #7e7e8284;
+    border: 1px solid #7e7e828e;
+    border-radius: 9999px;
+}
+
+.timeline h3 {
+    padding-left: 32px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail .date {
+    margin-bottom: 4px;
+    display: none;
+}
+
+.description p {
+    color: #6b7280;
+}
+
+.description ul {
+    color: #374151;
+}
+
+.position {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4px;
+    gap: 8px;
+}
+
+.position p {
+    display: inline-block;
+    padding: 0px 5px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.149);
+    border-radius: 6px;
+}
+
+
+.timeline-track,
+.timeline-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+}
+
+.timeline-track {
+    height: 100%;
+    background-color: #e4e4e0;
+}
+
+.timeline-progress {
+    height: 0%;
+    background-color: #1a1a1a;
+    transition: height 0.1s linear;
+}
+
+
+.education {
+    margin-top: 24px;
+    padding-top: 16px;
 }
 
 .education p {
-    color: rgba(0, 0, 0, 0.628);
+    margin-top: 4px;
+    color: #4b5563;
 }
 
-.education {
-    margin: 50px 0px 20px 0px;
+.resume {
+    margin-top: 24px;
+    padding: 24px 0;
+}
+
+.resume a {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: inherit;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: inherit;
+    text-decoration: none;
 }
 
 
 /* RESPONSIVE BREAKPOINTS */
-@media (max-width: 1180px){
-    .main-content {
-        padding: 0;
+@media (max-width: 767px) {
+    .content h2,.content h3,
+    .content p, .resume a {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
     }
-}
 
-@media (max-width: 767px){
-    .main-content {
-        margin: 48px 24px;
+    .title {
+        padding: 48px 12px 0 12px;
+    }
+
+    .title h1 {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        letter-spacing: -0.3px;
+    }
+
+    .detail {
+        gap: 48px;
+    }
+
+    .exp {
+        grid-template-columns: none;
+    }
+
+    .timeline-contaner {
+        display: none;
+    }
+
+    .description-contaner {
+        padding: 0 16px 0 12px;
+    }
+
+    .detail .date {
+        display: inline-block;
+    }
+
+    .education {
+        margin-top: 12px;
+    }
+
+    .resume {
+        margin-top: 12px;
     }
 }
 
 @media (max-width: 679px) {
-    .title h1 {
-        font-size: 1.3rem;
-        margin-bottom: 5px;
-    }
-
-    .content h2 {
-        font-size: 1rem;
-        line-height: 1.8rem;
-    }
-
-    .content h3 {
-        font-size: 0.95rem;
-    }
-
-    .content p {
-        margin-bottom: 6px;
-    }
-
     .title {
-        margin-bottom: 35px;
+        padding-top: 24px;
     }
 
-    .tools {
-        display: block;
-        gap: 20px;
-    }
-
-    .tools p {
-        font-size: 0.875rem;
-        padding: 0px 3px;
-    }
-
-    .exp-1, .exp-2, .exp-3,
-    .exp-4, .exp-5, .education {
-        margin-top: 20px;
-    }
-
-    .education h1 {
-        font-size: 1.2rem;
-    }
-
-    .education {
-        margin-bottom: 30px;
+    .detail {
+        gap: 36px;
     }
 }
