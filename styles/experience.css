@@ -62,6 +62,7 @@
     margin-left: 8px;
     width: 40px;
     height: 40px;
+    flex-shrink: 0;
     background-color: rgba(150, 140, 140, 0.205);
     border-radius: 9999px;
 }
@@ -96,7 +97,26 @@
 }
 
 .description ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
     color: #374151;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.description ul li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.description ul li::before {
+    content: "•";
+    margin-right: 8px;
+    flex-shrink: 0;
+    color: #37415180;
+    font-size: 0.75rem;
 }
 
 .position {
@@ -115,17 +135,11 @@
 }
 
 
-.timeline-track,
 .timeline-progress {
     position: absolute;
     left: 0;
     top: 0;
     width: 2px;
-}
-
-.timeline-track {
-    height: 100%;
-    background-color: #e4e4e0;
 }
 
 .timeline-progress {
@@ -193,11 +207,16 @@
     }
 
     .description-contaner {
-        padding: 0 16px 0 12px;
+        padding: 0 12px;
     }
 
     .detail .date {
         display: inline-block;
+    }
+
+    .description ul {
+        font-size: 0.75rem;
+        line-height: 1rem;
     }
 
     .education {
